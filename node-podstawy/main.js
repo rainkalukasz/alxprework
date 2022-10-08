@@ -107,29 +107,46 @@ console.log(expensiveProducts)
 
 
 // 1. Za pomoca funkcji forEach, policz sume produktow
-// 2. Oblicz cenę produktów (shopping), które w swojej nazwie mają literę e
 
 let sum = 0;
 
- shopping.forEach(product => {
-    sum = sum + product.price;
-    
-    });
-    console.log(sum);
+shopping.forEach(product => {
+  sum = sum + product.price;
+})
 
-const LettersProducts = shopping.filter(product =>{
-    return product.name.includes(`e`)
-});
-    console.log(LettersProducts);
+console.log(sum);
 
-let suma = 0;
+// 2. Oblicz cenę produktów (shopping), które w swojej nazwie mają literę e
 
-    LettersProducts.forEach(product =>{
-        suma = suma + product.price;
-});
+// Sposob #1
 
-    console.log(suma);
+// const productWithLetterE = shopping.filter(product => {
+//   return product.name.includes('e');
+// })
 
+// let productWithLetterESum = 0;
+
+// productWithLetterE.forEach(product => {
+//   productWithLetterESum += product.price;
+// });
+
+
+
+// Sposob #2
+
+// let productWithLetterESum = 0;
+
+// shopping
+//   .filter(product => product.name.includes('e'))
+//   .forEach(product => {
+//     productWithLetterESum += product.price;
+//   });
+
+// console.log(productWithLetterESum.toFixed(2))
+
+
+
+// 3*. Wroc do zadania z listą i spróbuj odfiltrować produkty :)
 
 
 
